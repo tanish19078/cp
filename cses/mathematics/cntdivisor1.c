@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+    int t;
+    scanf("%d", &t);
+    while(t--){
+        int n;
+        scanf("%d", &n);
+        int count = 0;
+        for(int i = 1; i * i <= n; i++){
+            if(n % i == 0){
+                count++;
+                if(i * i != n){
+                    count++;
+                }
+            }
+        }
+        printf("%d\n", count);       
+}
+    return 0;
+}
